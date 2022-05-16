@@ -1,0 +1,489 @@
+/*
+  index.css
+
+  Stylesheet for the main page. 
+*/
+
+:root {
+  --primary-color: rgb(37, 37, 37);
+  --secondary-color: rgb(255, 255, 255);
+  --tertiary-color: #000000;
+  --highlight-color: black;
+  --text-color: black;
+  --max-total-width: 1280px;
+
+  --button1-color: rgb(6, 104, 101);
+  --button2-color: rgb(143, 41, 10);
+  --button3-color: rgb(197, 0, 108);
+}
+
+html{
+  font-family: -apple-system,BlinkMacSystemFont, "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol","Noto Color Emoji";
+}
+
+body{
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+#header{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  height: fit-content;
+}
+
+#headerInner{
+  width: min(100%, var(--max-total-width));
+  max-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  height: fit-content;
+}
+
+#title{
+  flex: 70%;
+  left: 0%;
+  padding-left: min(15px, 1.1%);
+  padding-top: 0px;
+  padding-bottom: 3px;
+  margin-top: min(1.0vw, 5px);
+  margin-bottom: 0px;
+  display:block;
+  color:var(--secondary-color);
+  font-size: max(min(3.3vw, 45px), 26px);
+}
+
+#about{
+  flex: 25%;
+  padding-right: 10px;
+  padding-top: 0px;
+  bottom: 0px;
+  height: 100%;
+  display:flex;
+  text-align: right;
+  justify-content: right;
+  align-items: right;
+}
+
+#aboutButton {
+  flex: 50%;
+  right:0;
+  bottom: 0;
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  background-color: var(--button2-color);
+  color: var(--secondary-color);
+  font-size: 16px;
+  margin-top: min(1.0vw, 15px);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#mainBackground {
+  width: 100%;
+  height: 1080px;
+  position: absolute;
+  left:0%;
+  top: 0%;
+  bottom:0;
+}
+
+#mainBackgroundInner{
+  width: min(100%, var(--max-total-width));
+  max-height: 100%;
+  margin: 0 auto;
+  overflow:hidden;
+  padding: 0px;
+}
+
+#mainBackgroundImg {
+  margin: 0 auto;
+  width: min(100%, var(--max-total-width));
+  max-height: 100%;
+  min-width: 900px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+/* Tool 1 - Submitting a midi */
+#tool{
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top: max(min(18%, 200px), 130px);
+  height: max(min(15%, 200px), 100px);
+  pointer-events: none;
+}
+
+#toolInner{
+  width: min(100%, var(--max-total-width));
+  margin: 0 auto;
+  height: 100%;
+  pointer-events: none;
+}
+/*
+#toolInterface{
+  background-color: rgba(0, 0, 0, 0.9);
+  color:var(--secondary-color);
+  width: max(50%, 450px);
+  margin: 0 auto;
+  height: 110px;
+}*/
+
+#toolInterfaceMidi{
+  display: flex;
+  padding: 15px;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  height: fit-content;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  flex: 65%;
+  border: 1px solid #ccc;
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin-right: 5px;
+  height: fit-content;
+  min-height: 100%;
+}
+#toolInterfaceInputFilename{
+  padding: 5px;
+  height: fit-content;
+  min-height: 100%;
+}
+#toolInterfaceInput{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+#toolInterfaceButtonPerform{
+  flex: 25%;
+  background-color: var(--button1-color);
+  color: var(--secondary-color);
+  font-size: 16px;
+  height: fit-content;
+  min-height: 100%;
+  padding: 6px 12px;
+}
+#toolInterfaceInputFilenameInner{
+  padding-right: 20px;
+}
+
+#toolInterfaceOr{
+  padding:10px;
+  font-size: 16px;
+  max-width: 100%;
+  margin-left: 5px;
+  margin-right: 7px;
+  color: var(--primary-color);
+  border: none;
+  height: fit-content;
+}
+
+#toolInterfacePreloaded{
+  display: flex;
+  padding: 15px;
+  padding-bottom: 0px;
+  height: fit-content;
+}
+#toolInterfacePreloadedSelectDiv{
+  flex: 65%;
+  margin-right: 5px;
+  height: 100%;
+}
+#toolInterfacePreloadedSelect{
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+#toolInterfaceButtonPerform2Div{
+  flex: 25%;
+}
+#toolInterfaceButtonPerform2{
+  background-color: var(--button2-color);
+  color: var(--secondary-color);
+  font-size: 16px;
+  width: 100%;
+  height: fit-content;
+  padding: 6px 12px;
+}
+
+/* Tool 2 - Performance progress */
+#toolProgress{
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top: max(min(20%, 220px), 170px);
+  height: max(min(15%, 200px), 100px);
+  pointer-events: none;
+}
+
+#toolProgressInner{
+  width: min(100%, var(--max-total-width));
+  margin: 0 auto;
+  height: 100%;
+  pointer-events: none;
+}
+
+#toolProgressInterfaceText{
+  font-size: 25px;
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  height: 25px + 10px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tool 3 - Playing a midi */
+#toolPlayer{
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top: max(min(16%, 180px), 120px);
+  height: max(min(16%, 200px), 100px);
+  pointer-events: none;
+}
+
+#toolPlayerInner{
+  width: min(100%, var(--max-total-width));
+  margin: 0 auto;
+  height: 100%;
+  pointer-events: none;
+}
+
+#toolPlayerInterfaceTitle{
+  font-size: 25px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 25px + 10px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#toolPlayerInterfaceAudio{
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#toolPlayerInterfacePerformance{
+  display: flex;
+  height: 30px;
+  padding: 10px;
+}
+
+#toolPlayerInterfaceButtonSaveMp3Outer {
+  flex:10.33%;
+}
+#toolPlayerInterfaceButtonSaveMp3{
+  background-color: var(--button1-color);
+  color: var(--secondary-color);
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
+#toolPlayerInterfaceButtonSaveMidi{
+  background-color: var(--button2-color);
+  color: var(--secondary-color);
+  font-size: 16px;
+  flex:10.33%;
+  margin-left: 5px;
+}
+#toolPlayerInterfaceReturn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+#toolPlayerInterfaceReturnButton{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 16px;
+  width:100%;
+  height: 100%;
+}
+
+#info {
+  position: absolute; 
+  top: max(min(45%, 500px), 380px);
+  left: 0%;
+  width: 100%;
+  bottom:0;
+}
+
+#infoInner{
+  width: min(100%, var(--max-total-width));
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  height: fit-content;
+  min-height: 100%;
+}
+
+#charts{
+  display: flex;
+  overflow:auto;
+  height: fit-content;
+}
+
+.chartImg{
+  flex: 0 0 auto;
+  padding: 0px;
+  width: max(33.33%, 350px);
+  display: block;
+  -webkit-backface-visibility: hidden; 
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  transform: translateZ(0);
+}
+
+#infoText{
+  margin-top: 0;
+  margin-left: min(5%, 20px);
+  margin-right: min(5%, 20px);
+  padding-top: 1px;
+  padding-bottom: 20px;
+  height: fit-content;
+}
+
+#aboutInfo{
+  position: absolute; 
+  top: max(min(45%, 500px), 380px);
+  left: 0%;
+  width: 100%;
+  bottom:0;
+}
+
+#aboutInfoInner{
+  width: min(100%, var(--max-total-width));
+  margin: 0 auto;
+  padding-top: 1px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  height: fit-content;
+  min-height: 100%;
+}
+
+#aboutInfoText{
+  margin-top: 0;
+  margin-left: min(5%, 20px);
+  margin-right: min(5%, 20px);
+  padding-bottom: 20px;
+  height: fit-content;
+  overflow-wrap:break-word;
+}
+
+/* Contact div */
+#aboutContact{
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top: max(min(16%, 180px), 120px);
+  height: max(min(16%, 200px), 100px);
+  pointer-events: auto;
+}
+
+#aboutContactInner{
+  width: min(100%, var(--max-total-width));
+  margin: 0 auto;
+  height: 100%;
+  pointer-events: auto;
+}
+
+#aboutContactInterface{
+  background-color: rgba(0, 0, 0, 0.9);
+  color: var(--secondary-color);
+  width: min(90%, 600px);
+  margin: 0 auto;
+  height: 200px;
+  overflow: hidden;
+  padding: 5px;
+  display: flex;
+}
+
+#aboutContactInterfacePhoto{
+  flex: 45%;
+  overflow: hidden;
+  padding: 5px;
+}
+
+#aboutContactInterfaceImg{
+  height: 100%;
+  width: auto;
+  -webkit-backface-visibility: hidden; 
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  transform: translateZ(0);
+}
+
+#aboutContactInterfaceInfo{
+  padding-left: 5px;
+  flex: 55%;
+  overflow: hidden;
+}
+
+#aboutContactInterfaceTitle {
+  font-size: 25px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5px;
+  height: 25px + 10px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#aboutContactInterfaceText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#aboutContactInterfaceSubtitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
