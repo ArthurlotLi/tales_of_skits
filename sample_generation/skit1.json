@@ -1,27 +1,270 @@
-{
-  "EIZEN" : [
-    "My name's Eizen.",
-    "I'm the captain of the van eltia and her crew.",
-    "My sister and I have been going through some tough times for a while now.",
-    "You could say that things have been dragon on."
-  ],
-  "VELVET" : [
-    "I'm Velvet Crowe.",
-    "I'm edgy and hard to talk to, but I've got a softer side.",
-    "In that respect, I fit right into the story of Tales of Berseria.",
-    "My character dovetails perfectly into the plot."
-  ],
-  "EDNA" : [
-    "I'm Edna, an Earth Seraph",
-    "I don't like humans a lot, because they're stupid.",
-    "I don't appreciate stupid things at all, but I still go along with Sorey and the others.",
-    "Some people might consider it strange.",
-    "They might even call it abnormin."
-  ],
-  "JUDE" : [
-    "I'm Doctor Jude Mathis from Tales of Xillia and Tales of Xillia 2.",
-    "My research is really important to me.",
-    "It can get real frustrating sometimes though.",
-    "Some days, I continue working just out of spyrite."
-  ]
-}
+[
+  {
+    "EIZEN" : [
+      {
+        "The name's Eizen. I'm the captain of the van eltia and her crew.":
+        "The name's Eizen. I'm the captain of the van eltia and her crew."
+      },
+      {
+        "My sister and I have been going through some tough times for a while now.":
+        "My sister and I have been going through some tough times for a while now."
+      },
+      {
+        "You could say that things have been dragon on." :
+        "You could say that things have been, dragon on."
+      }
+    ]
+  },
+  {
+    "VELVET" : [
+      {
+        "I'm Velvet Crowe." :
+        "I'm Velvet Crowe."
+      },
+      {
+        "I'm edgy and hard to talk to, but I've got a softer side." :
+        "I'm edgy and hard to talk to but I've got a softer side."
+      },
+      {
+        "In that respect, I fit right into the story of Tales of Berseria." :
+        "In that respect, I fit right into the story of Tales of Berseria."
+      },
+      {
+        "My character dovetails perfectly into the plot." :
+        "My character dovetails perfectly into the plot."
+      }
+    ]
+  },
+  {
+    "EDNA" : [
+      {
+        "I'm Edna, an Earth Seraph." :
+        "I'm Edna, an Earth Seraph"
+      },
+      {
+        "I don't like humans a lot, because they're stupid." :
+        "I don't like humans a lot because they're stupid."
+      },
+      {
+        "I don't appreciate stupid things at all, but I still go along with Sorey and the others. Some people might consider that strange." :
+        "I don't appreciate stupid things at all, but I still go along with Sorey and the others. Some people might consider that strange."
+      },
+      {
+        "They might even call it abnormin." :
+        "They might even call it, abnormin."
+      }
+    ]
+  },
+  {
+    "JUDE" : [
+      {
+        "I'm Doctor Jude Mathis from Tales of Xillia and Tales of Xillia 2." :
+        "I'm Doctor Jude Mathis from Tales of Xillia and Tales of Xillia 2."
+      },
+      {
+        "My research is really important to me. It can get real frustrating sometimes though." :
+        "My research is really important to me. It can get real frustrating sometimes though."
+      },
+      {
+        "Some days, I continue working just out of spyrite." :
+        "Some days I continue working, just out of spyrite."
+      }
+    ]
+  },
+  {
+    "ALISHA" : [
+      {
+        "My name's Alisha Diphda. I serve as the princess of Hyland.":
+        "My name's Alisha Diphda. I serve as the princess of Hyland."
+      },
+      {
+        "Look at the time, I'm afraid I have to go now." :
+        "Look at the time, I'm afraid I have to go now."
+      }
+    ]
+  },
+  {
+    "ROKUROU" : [
+      {
+        "Rokurou Rangetsu, at your service.":
+        "Rokurou Rangetsu, at your service."
+      },
+      {
+        "I'm a damn good swordsman, but don't let my mean looks fool ya. I'm actually a stellar comedian." :
+        "I'm a damn good swordsman but don't let my mean looks fool ya. I'm actually a stellar comedian."
+      },
+      {
+        "I'll have you stormhowling with laughter in the blink of an eye." :
+        "I'll have you stormhowling with laughter in the blink of an eye."
+      }
+    ]
+  },
+  {
+    "YURI" : [
+      {
+        "I'm Yuri Lowell.":
+        "I'm Yuri Lowell."
+      },
+      {
+        "I went on journey with a group of weirdos a while back.":
+        "I went on journey with a group of weirdos a while back."
+      },
+      {
+        "I guess you could say it was a blastia.":
+        "I guess you could say it was, a blastia"
+      }
+    ]
+  },
+  {
+    "ALVIN" :[
+      {
+        "I'm Alvin, nice to meet you.":
+        "I'm Alvin, nice to meet you."
+      },
+      {
+        "I'm either a perfectly reputable mercenary or a perfectly reputable businessman, depending on who you ask." :
+        "I'm either a perfectly reputable mercenary, or a perfectly reputable businessman, depending on who you ask."
+      }
+    ]
+  },
+  {
+    "BENWICK" :[
+      {
+        "First mate Benwick here. I keep things running shipshape." :
+        "First mate Benwick here. I keep things running shipshape."
+      }
+    ]
+  },
+  {
+    "DEZEL" : [
+      {
+        "Dezel." :
+        "Dezel."
+      },
+      {
+        "I don't talk much, but I have no problems finding my way around." :
+        "I don't talk much, but I have no problems finding my way around."
+      },
+      {
+        "It's a bit of a breeze for me." :
+        "It's a bit of a breeze for me."
+      }
+    ]
+  },
+  {
+    "GAIUS" : [
+      {
+        "The name's Gaius. I'm undercover, though, so please call me Erston.":
+        "The name's Gaius. I'm undercover though so please call me Erston"
+      }
+    ]
+  },
+  {
+    "GRIMOIRH" : [
+      {
+        "I'm Grimoirh. I'm the embodiment of being too old for all of this.":
+        "I'm Grimoirh. I'm the embodiment of being too old for all of this."
+      }
+    ]
+  },
+  {
+    "JUDITH" : [
+      {
+        "My name's Judith. Pleased to meet you.":
+        "My name's Judith. Pleased to meet you."
+      }
+    ]
+  },
+  {
+    "KUROGANE" :[
+      {
+        "I'm Kurogane, a swordsmith who worked so hard my head fell off." :
+        "I'm Kurogane, a swordsmith who worked so hard my head fell off."
+      },
+      {
+        "Please remember that. I don't have a head. It's my defining feature.":
+        "Please remember that. I don't have a head. It's my defining feature."
+      }
+    ]
+  },
+  {
+    "LAILAH" : [
+      {
+        "Why hello there, I'm Lailah, a prime lord for Sorey." :
+        "Why hello there I'm Lailah a prime lord for Sorey."
+      }
+    ]
+  },
+  {
+    "MEDISSA" : [
+      {
+        "I'm Medissa. If you do not eat your vegetables, you and I will have words." :
+        "I'm Medissa. If you do not eat your vegetables, you and I will have words."
+      }
+    ]
+  },
+  {
+    "RAVEN" : [
+      {
+        "Old Man Raven's the name." :
+        "Old Man Raven's the name."
+      }
+    ]
+  },
+  {
+    "SERES" : [
+      {
+        "I'm called Seres, and I play a bigger role in the story of Tales of Berseria than you might think." :
+        "I'm called Seres, and I play a bigger role in the story of Tales of Berseria than you might think."
+      }
+    ]
+  },
+  {
+    "TERESA" : [
+      {
+        "Exorcist Legate Teresa Burnes. Malakhim are tools to me." :
+        "Exorcist Legate Teresa Burnes. Malakhim are tools to me."
+      }
+    ]
+  },
+  {
+    "ZAVEID" : [
+      {
+        "Hey there, I'm Zavied. Nice to meet you." :
+        "Hey there, I'm Zavied. Nice to meet you."
+      }
+    ]
+  },
+  {
+    "ARTORIUS" : [
+      {
+        "I'm Artorius Collbrande. I'm a perfectly reasonable person." :
+        "I'm Artorius Collbrande. I'm a perfectly reasonable person."
+      }
+    ]
+  },
+  {
+    "DYLE" : [
+      {
+        "My name's Dyle. Please don't tell Kamoana I'm here. My tail just grew back." :
+        "My name's Dyle. Please don't tell Kamoana I'm here. My tail just grew back."
+      }
+    ]
+  },
+  {
+    "MILLA" : [
+      {
+        "I'm Milla Maxwell. I swish my hair like a cow." :
+        "I'm Milla Maxwell. I swish my hair like a cow."
+      }
+    ]
+  },
+  {
+    "ROWEN" : [
+      {
+        "My name is Rowen. I have a passion for conducting." :
+        "My name is Rowen. I have a passion for conducting."
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "JUDE" : [
+      {
+        "Welcome to the Tales of Skits website." :
+        "Welcome to the Tales of Skits website"
+      }
+    ]
+  },
+  {
+    "EDNA" : [
+      {
+        "Where Artificial Intelligence meets the \"Tales of\" video game series!" :
+        "Where Artificial Intelligence meets the Tales of video game series!"
+      }
+    ]
+  },
+  {
+    "VELVET" : [
+      {
+        "Voice data was extracted from in-game skits using Computer Vision, Natural Language Processing, and Speaker Identification methods." :
+        "Voice data was extracted from in-game skits using Computer Vision, Natural Language Processing, and Speaker Identification methods"
+      }
+    ]
+  },
+  {
+    "MIKLEO" : [
+      {
+        "That data was then used to train uniquely specialized, state of the art text-to-speech voice cloning models." :
+        "That data was then used to train uniquely specialized, state of the art text to speech voice cloning models."
+      }
+    ]
+  },
+  {
+    "EIZEN" : [
+      {
+        "This website provides original voiced skits using the final product, whose components were trained over the course of a few months." :
+        "This website provides original voiced skits using the final product, whose components were trained over the course of a few months."
+      }
+    ]
+  },
+  {
+    "ALISHA" : [
+      {
+        "Please enjoy the results of this fun project." :
+        "Please enjoy the results of this fun project."
+      }
+    ]
+  }
+]

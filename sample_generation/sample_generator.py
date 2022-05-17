@@ -63,44 +63,51 @@ def generate_samples(json_file: str):
     speaker_encoder_fpath=_speaker_encoder_fpath, target=_target, overlap=_overlap, 
     batched=_batched)
 
-  for speaker in speaker_samples_json:
-    samples = speaker_samples_json[speaker]
-    assert type(samples) == list
-    for i in range(len(samples)):
-      print("[INFO] Sample Generator - Processing %s_%d.wav." % (speaker, i))
-      sample = samples[i]
-      # Speak each sample. 
-      text_to_speak = [sample]
-      split_sentence_re = r'[\.|!|,|\?|:|;|-] '
+  for a in range(len(speaker_samples_json)):
+    segment = speaker_samples_json[a]
 
-      # The only preprocessing we do here is to split sentences into
-      # different strings. This makes the pronunciation cleaner and also
-      # makes inference faster (as it happens in a batch).
-      processed_texts = []
-      for text in text_to_speak:
-        split_text = re.split(split_sentence_re, text)
-        processed_texts += split_text
-        processed_texts
-      
-      sample_filename = str(Path(destination_dir).joinpath("%s_%d.wav" % (speaker, i)))
+    for speaker in segment:
+      samples = segment[speaker]
+      assert type(samples) == list
+      for i in range(len(samples)):
+        sample_pair = samples[i]
+        assert type(sample_pair) == dict
+        assert len(sample_pair) == 1
+        for transcript in sample_pair:
+          sample_filename = str(Path(destination_dir).joinpath("%d_%s_%d.wav" % (a, speaker, i)))
+          print("[INFO] Sample Generator - Processing: %s." % Path(sample_filename).name)
 
-      wavs = multispeaker_synthesis.synthesize_audio_from_embeds(texts = processed_texts, 
-        embeds_fpath = Path(_embeds_fpath).joinpath(speaker + ".npy"), 
-        vocoder = _vocoder)
-      
-      assert len(wavs) == 1
+          sample = sample_pair[transcript]
+          # Speak each sample. 
+          text_to_speak = [sample]
+          split_sentence_re = r'[\.|!|,|\?|:|;|-] '
 
-      # save the wav. 
-      wav = wavs[0]
-      audio.save_wav(wav, sample_filename, sr=hparams.sample_rate)
-      # Normalize the audio. Not the best code, but it works in ~0.007 seconds.
-      wav_suffix = sample_filename.rsplit(".", 1)[1]
-      sound = AudioSegment.from_file(sample_filename, wav_suffix)
-      change_in_dBFS = -15.0 - sound.dBFS
-      normalized_sound = sound.apply_gain(change_in_dBFS)
-      normalized_sound.export(sample_filename, format=wav_suffix)
+          # The only preprocessing we do here is to split sentences into
+          # different strings. This makes the pronunciation cleaner and also
+          # makes inference faster (as it happens in a batch).
+          processed_texts = []
+          for text in text_to_speak:
+            split_text = re.split(split_sentence_re, text)
+            processed_texts += split_text
+            processed_texts
 
-      # All done with this!
+          wavs = multispeaker_synthesis.synthesize_audio_from_embeds(texts = processed_texts, 
+            embeds_fpath = Path(_embeds_fpath).joinpath(speaker + ".npy"), 
+            vocoder = _vocoder)
+          
+          assert len(wavs) == 1
+
+          # save the wav. 
+          wav = wavs[0]
+          audio.save_wav(wav, sample_filename, sr=hparams.sample_rate)
+          # Normalize the audio. Not the best code, but it works in ~0.007 seconds.
+          wav_suffix = sample_filename.rsplit(".", 1)[1]
+          sound = AudioSegment.from_file(sample_filename, wav_suffix)
+          change_in_dBFS = -15.0 - sound.dBFS
+          normalized_sound = sound.apply_gain(change_in_dBFS)
+          normalized_sound.export(sample_filename, format=wav_suffix)
+
+          # All done with this!
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()

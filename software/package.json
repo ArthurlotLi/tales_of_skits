@@ -15,7 +15,7 @@
     "axios": "^0.27.2",
     "express": "^4.17.1",
     "express-session": "^1.17.3",
-    "file-loader": "6.2.0",
+    "file-loader": "^6.2.0",
     "node-fetch": "^2.6.1",
     "path": "^0.12.7",
     "react": "^17.0.2",
