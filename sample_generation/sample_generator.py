@@ -8,6 +8,9 @@
 #
 # Requires multispeaker synthesis to be in the parent directory
 # to tales_of_synthesis. 
+#
+# Usage:
+# python sample_generator.py skit1.json
 
 import sys
 import json
@@ -15,13 +18,11 @@ import os
 from pathlib import Path
 import re
 from pydub import AudioSegment
+import argparse
 
 sys.path.append("../../multispeaker_synthesis")
 
 from production_inference import * 
-
-_destination_dir = "speaker_samples"
-_json_file = "speaker_samples.json"
 
 # Multispeaker Synthesis parameters.
 _vocoder = "sv2tts"
@@ -37,22 +38,24 @@ _target = 2000
 _overlap = 100
 _batched = True
 
-def generate_samples():
+def generate_samples(json_file: str):
+  destination_dir = json_file.replace(".json", "")
+
   # Housekeeping - ensure the destination folder is clean.
-  if os.path.exists(_destination_dir):
-    existing_files = os.listdir(_destination_dir)
+  if os.path.exists(destination_dir):
+    existing_files = os.listdir(destination_dir)
     if len(existing_files) > 0:
       print("[INFO] Sample Generator - %d existing files found in %s. Overwrite?\n\nPress [Enter] to Overwrite." 
-        % (len(existing_files), _destination_dir))
+        % (len(existing_files), destination_dir))
       input()
       for file in existing_files:
-        os.remove(str(Path(_destination_dir).joinpath(file)))
+        os.remove(str(Path(destination_dir).joinpath(file)))
   
-  Path(_destination_dir).mkdir(exist_ok=True)
-  assert len(os.listdir(_destination_dir)) == 0
+  Path(destination_dir).mkdir(exist_ok=True)
+  assert len(os.listdir(destination_dir)) == 0
 
   # All set. Let's generate the files from the json file.
-  f = open(_json_file)
+  f = open(json_file)
   speaker_samples_json = json.load(f)
   f.close()
 
@@ -79,7 +82,7 @@ def generate_samples():
         processed_texts += split_text
         processed_texts
       
-      sample_filename = Path(_destination_dir).joinpath("%s_%d.wav" % (speaker, i))
+      sample_filename = str(Path(destination_dir).joinpath("%s_%d.wav" % (speaker, i)))
 
       wavs = multispeaker_synthesis.synthesize_audio_from_embeds(texts = processed_texts, 
         embeds_fpath = Path(_embeds_fpath).joinpath(speaker + ".npy"), 
@@ -100,4 +103,8 @@ def generate_samples():
       # All done with this!
 
 if __name__ == "__main__":
-  generate_samples()
+  parser = argparse.ArgumentParser()
+  parser.add_argument("json_file", type=str)
+  args = parser.parse_args()
+
+  generate_samples(**vars(args))
