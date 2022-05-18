@@ -30,20 +30,25 @@ const skitObjects = [
     "../../../assets/skit0", // skitSamples
   ),
   new Skit(
-    "Who keeps on mentioning Maotelus?! (Lailah, go home)", // skitName
+    "Who keeps on mentioning Maotelus?", // skitName
     "../../../assets/skit1.json", // skitJsonLocation
     "../../../assets/skit1", // skitSamples
   ),
   new Skit(
-    "Leave me out of this", // skitName
+    "A vested interest", // skitName
     "../../../assets/skit2.json", // skitJsonLocation
     "../../../assets/skit2", // skitSamples
   ),
+  new Skit(
+    "Discussing the others", // skitName
+    "../../../assets/skit3.json", // skitJsonLocation
+    "../../../assets/skit3", // skitSamples
+  ),
 ]
 
-const audioEndedChecking = 50 // in ms.
-const audioWaitBetweenUtterances = 0 // in ms
-const audioEllipseWait = 1500 // in ms.
+const audioEndedChecking = 50; // in ms.
+const audioWaitBetweenUtterances = 0; // in ms
+const audioEllipseWait = 1500; // in ms.
 
 const defaultSpeakerImage = "VELVET"
 const defaultSkitSubtitles = "Please select a skit to watch..."

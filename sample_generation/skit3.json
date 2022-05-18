@@ -1,0 +1,181 @@
+[
+  {
+    "JUDE" : [
+      {
+        "These people here all seem so interesting." :
+        "These people here all seem so interesting."
+      },
+      {
+        "I bet all of their stories are just as incredible and unbelievable as ours." :
+        "I bet all of their stories are just as incredible and unbelievable as ours."
+      }
+    ]
+  },
+  {
+    "GAIUS" : [
+      {
+        "I have been making the rounds ever since we arrived. There are indeed no small number of colorful characters here.":
+        "I have been making the rounds ever since we arrived. There are indeed no small number of colorful characters here."
+      },
+      {
+        "I must say, however, some of these people have... slight differences in the level of incredulosity in their stories." :
+        "I must say however, some of these people have slight differences in the level of incredulosity in their stories."
+      }
+    ]
+  },
+  {
+    "JUDE" : [
+      {
+        "Oh. Why is that?":
+        "Oh. Why is that?"
+      }
+    ]
+  },
+  {
+    "GAIUS" : [
+      {
+        "Well, to illustrate my point, I spoke earlier with a strange woman wearing some especially peculiar clothing." :
+        "Well to illustrate my point, I spoke earlier with a strange woman wearing some especially peculiar clothing."
+      }, 
+      {
+        "Her tales were outlandish to say the least. I found myself lost somewhere around the part with the peach floating in a river." :
+        "Her tales were outlandish to say the least. I found myself lost somewhere around the part with the peach floating in a river."
+      },
+      {
+        "I believe her name was something like, \"soggy shoe\", however I admit I am not certain." :
+        "I believe her name was something like soggy shoe, however I admit I am not certain."
+      }
+    ]
+  }, 
+  {
+    "JUDE" : [
+      {
+        "\"Soggy... Shoe\"?" :
+        "Soggy Shoe?"
+      },
+      {
+        "Huh. Well, I suppose the phrase \"colorful\" characters does imply the possibility of rather garish colors as well." :
+        "Huh. Well I suppose the phrase colorful characters does imply the possibility of rather garish colors as well."
+      }
+    ]
+  },
+  {
+    "GAIUS" : [
+      {
+        "Speaking plainly, I do believe I would prefer to never speak with that one floating thing ever again." :
+        "Speaking plainly, I do believe I would prefer to never speak with that one floating thing ever again."
+      },
+      {
+        "It was sized similarily to Teepo, yet utters a horrid screech that puts even the worst ghoul monster to shame." :
+        "It was sized similarily to Teepo, yet utters a horrid screech that puts even the worst ghoul monster to shame."
+      }
+    ]
+  },
+  {
+    "BIENFU" :[
+      {
+        "Did someone here call me? I felt my ears burning, bien!" :
+        "Did someone here call me? I felt my ears burning bien!"
+      }
+    ]
+  },
+  {
+    "GAIUS" : [
+      {
+        "Damn." :
+        "Damn."
+      },
+      {
+        "Jude, we must retreat, now. We are severely outmatched!" :
+        "Jude, we must retreat now. We are severely outmatched!"
+      }
+    ]
+  },
+  {
+    "JUDE" :[
+      {
+        "Oh, um, okay!" :
+        "Oh um, okay!"
+      }
+    ]
+  },
+  {
+    "ROKUROU" : [
+      {
+        "..." :
+        "null"
+      },
+      {
+        "That's a fair reaction. I don't think Bienfu's voice came out all that well." :
+        "That's a fair reaction. I don't think Bienfu's voice came out all that well."
+      }
+    ]
+  },
+  {
+    "EIZEN" :[
+      {
+        "And why is that? He sounds perfectly normal to my ears." :
+        "And why is that? He sounds perfectly normal to my ears."
+      }
+    ]
+  },
+  {
+    "ROKUROU" : [
+      {
+        "...Are you sure you haven't had one too many cups tonight?" :
+        "Are you sure you haven't had one too many cups tonight?"
+      }
+    ]
+  },
+  {
+    "EIZEN" : [
+      {
+        "There's no such thing as too many cups." :
+        "There's no such thing as too many cups."
+      },
+      {
+        "Just too little strength." :
+        "Just too little strength."
+      }
+    ]
+  },
+  {
+    "ROKUROU" : [
+      {
+        "Hey, that sounds like a challenge." :
+        "Hey that sounds like a challenge."
+      }
+    ]
+  },
+  {
+    "EIZEN" : [
+      {
+        "You bet it is. Come on. First one on the floor has to spend a few hours in a mobile game that's doomed for shutdown.":
+        "You bet it is. Come on. First one on the floor has to spend a few hours in a mobile game that's doomed for shutdown."
+      }
+    ]
+  },
+  {
+    "ROKUROU" : [
+      {
+        "..." :
+        "null"
+      },
+      {
+        "Oh what the heck. You're on!" :
+        "Oh what the heck. You're on!"
+      }
+    ]
+  },
+  {
+    "TERESA" :[
+      {
+        "..." :"null"
+      },
+      {
+        "\"Colorful\" is one way to put it, I suppose." :
+        "Colorful is one way to put it, I suppose."
+      }
+    ]
+  }
+]

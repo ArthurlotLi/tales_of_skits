@@ -107,6 +107,11 @@ def generate_samples(json_file: str):
           normalized_sound = sound.apply_gain(change_in_dBFS)
           normalized_sound.export(sample_filename, format=wav_suffix)
 
+          # For cheaper uploading, use .mp3 instead of uncompressed .wavs. 
+          #print("[INFO] Sample Generator - Converting from wav to mp3 with PyDub...")
+          #AudioSegment.from_wav(sample_filename).export(sample_filename.replace(".wav", ".mp3"), format="mp3")
+          #os.remove(sample_filename)
+
           # All done with this!
 
 if __name__ == "__main__":

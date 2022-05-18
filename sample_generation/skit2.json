@@ -18,8 +18,8 @@
   {
     "MIKLEO" : [
       {
-        "And exactly how am I supposed to do that? There's too many of us here!" :
-        "And exactly how am I supposed to do that? There's too many of us here."
+        "And exactly how am I supposed to do that? There's too many of us!" :
+        "And exactly how am I supposed to do that? There's too many of us."
       },
       {
         "It's hard to even get some space to breathe when there are people from so many different games in one space.":
@@ -74,12 +74,12 @@
   {
     "EIZEN" : [
       {
-        "That so...?" :
-        "That so...?"
+        "Is that so...?" :
+        "is that so?"
       },
       {
         "Well then, maybe we should test that theory." :
-        "Well then maybe we should test that theory."
+        "Well then, maybe we should test that theory."
       },
       {
         "I have a vested interest in making sure my sister has her priorities straight." :
@@ -91,7 +91,7 @@
     "VELVET" : [
       {
         "...Keep me out of this." :
-        "...Keep me out of this."
+        "Keep me out of this."
       }
     ]
   }
