@@ -30,14 +30,20 @@ const skitObjects = [
     "../../../assets/skit0", // skitSamples
   ),
   new Skit(
-    "Who keeps on saying Maotelus?! (Lailah, go home)", // skitName
+    "Who keeps on mentioning Maotelus?! (Lailah, go home)", // skitName
     "../../../assets/skit1.json", // skitJsonLocation
     "../../../assets/skit1", // skitSamples
+  ),
+  new Skit(
+    "Leave me out of this", // skitName
+    "../../../assets/skit2.json", // skitJsonLocation
+    "../../../assets/skit2", // skitSamples
   ),
 ]
 
 const audioEndedChecking = 50 // in ms.
 const audioWaitBetweenUtterances = 0 // in ms
+const audioEllipseWait = 1500 // in ms.
 
 const defaultSpeakerImage = "VELVET"
 const defaultSkitSubtitles = "Please select a skit to watch..."
@@ -104,11 +110,7 @@ export class App extends React.Component {
     else{
       // Cancel the skit. 
       console.log("[INFO] Skit cancelled entirely! No replacement selected.")
-      await this.setState({
-        speakerImage: defaultSpeakerImage,
-        skitSubtitles: defaultSkitSubtitles,
-        currentSkit: "",
-      });
+      this.resetSkits();
     }
   }
 
@@ -139,6 +141,7 @@ export class App extends React.Component {
               speakerImage: utteranceSpeaker,
               skitSubtitles: utteranceSubtitles,
             });
+            
 
             // Load the audio
             let audio = new Audio(skit.skitSamples + "/" + utteranceWavFilename);
@@ -151,14 +154,20 @@ export class App extends React.Component {
               currentAudio: audio,
               playingAudio: true
             });
-            audio.play();
-            // Wait 50 ms until the audio is done. 
-            while(!audio.paused){
-              if(this.state.currentSkit != skit.skitName) {
-                audio.pause();
-                break;
+
+            if(utteranceSubtitles == "..."){
+              await new Promise(r => setTimeout(r, audioEllipseWait));
+            }
+            else{
+              audio.play();
+              // Wait 50 ms until the audio is done. 
+              while(!audio.paused){
+                if(this.state.currentSkit != skit.skitName) {
+                  audio.pause();
+                  break;
+                }
+                await new Promise(r => setTimeout(r, audioEndedChecking));
               }
-              await new Promise(r => setTimeout(r, audioEndedChecking));
             }
 
             // An extra pause between utterances. 
@@ -172,12 +181,18 @@ export class App extends React.Component {
 
     // Skit has completed.
     if(this.state.currentSkit == skit.skitName){
-      await this.setState({
-        speakerImage: defaultSpeakerImage,
-        skitSubtitles: defaultSkitSubtitles,
-        currentSkit: "",
-      });
+      this.resetSkits();
     }
+  }
+
+  async resetSkits(){
+    await this.setState({
+      speakerImage: defaultSpeakerImage,
+      skitSubtitles: defaultSkitSubtitles,
+      currentSkit: "",
+    });
+    let skitDropdown = document.getElementById("skitSelectionDropdown") as HTMLSelectElement;
+    skitDropdown.selectedIndex = 0
   }
 
   render() {
@@ -192,18 +207,15 @@ export class App extends React.Component {
         <div id="content">
           <div id="contentInner">
 
-            <h2 id = "title">
-              Tales of Skits
-            </h2>
-            <div id="subtitle"><b>AI-synthesized audio</b></div>
-
-            <hr/>
+            <div id="contentUpper">
+              <h2 id = "title">
+                Tales of Skits
+              </h2>
+              <div id="subtitle"><b>AI-synthesized audio</b></div>
+            </div>
 
             <div id="skitSelectionSection">
               <div id="skitSelectionSectionInner">
-                <div id="skitSelectionLabel">
-                  <b>Select a Skit:</b>
-                </div>
                 <select id="skitSelectionDropdown" default="" onChange={evt => this.onSkitSelect(evt)}>
                   {Object.keys(this.state.skitDropdown).map((x,y) => <option key={y}>{x}</option>)}
                 </select>
@@ -227,37 +239,36 @@ export class App extends React.Component {
               </div>
             </div>
 
-            <hr/>
+            <div id="contentLower">
 
-            <div id="introduction">
-              <div id="introductionInner">
-                <div>
+              <div id="introduction">
+                <div id="introductionInner">
+                  <h2 id="introductionHeader">
+                    Multi-Speaker Synthesis with Video Game Characters
+                  </h2>
+
+                  <br/>
+
+                  <div>
                   Artificial Intelligence meets the "Tales of" video game series! 
-                </div>
+                  </div>
 
-                <br/>
+                  <br/>
 
-                <div>
-                  Voice data was extracted from in-game skits using various Computer Vision, Natural Language Processing, and Audio Processing techniques. 
+                  <div>
+                    Voice data was extracted from in-game skits using Computer Vision, Natural Language Processing, and Speaker Verification methods. 
 
-                  This data was then used to train uniquely specialized, state of the art text-to-speech voice cloning models.
-                </div>
+                    This data was then used to train uniquely specialized, state of the art text-to-speech voice cloning models.
+                  </div>
 
-                <br/>
+                  <br/>
 
-                <div>
-                  This website provides original, voiced skits using the final model, whose components were trained over the course of months. 
-                </div>
-
-                <br/>
-
-                <div>
-                  Please enjoy!
+                  <div>
+                    This website provides original, voiced skits using the final model, whose components were trained over the course of months.
+                  </div>
                 </div>
               </div>
             </div>
-
-            <hr/>
 
           </div>
         </div>

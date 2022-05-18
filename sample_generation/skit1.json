@@ -2,15 +2,15 @@
   {
     "EIZEN" : [
       {
-        "The name's Eizen. I'm the captain of the van eltia and her crew.":
-        "The name's Eizen. I'm the captain of the van eltia and her crew."
+        "The name's Eizen. I'm the captain of the Van Eltia and her crew.":
+        "The name's Eizen. I'm the captain of the Van Eltia and her crew."
       },
       {
         "My sister and I have been going through some tough times for a while now.":
         "My sister and I have been going through some tough times for a while now."
       },
       {
-        "You could say that things have been dragon on." :
+        "You could say that things have been \"dragon on\"." :
         "You could say that things have been, dragon on."
       }
     ]
@@ -30,8 +30,8 @@
         "In that respect, I fit right into the story of Tales of Berseria."
       },
       {
-        "My character dovetails perfectly into the plot." :
-        "My character dovetails perfectly into the plot."
+        "I suppose you could say my character \"dovetails\" perfectly into the plot." :
+        "I suppose you could say my character dovetails perfectly into the plot."
       }
     ]
   },
@@ -50,7 +50,7 @@
         "I don't appreciate stupid things at all, but I still go along with Sorey and the others. Some people might consider that strange."
       },
       {
-        "They might even call it abnormin." :
+        "They might even call it \"abnormin.\"" :
         "They might even call it, abnormin."
       }
     ]
@@ -66,7 +66,7 @@
         "My research is really important to me. It can get real frustrating sometimes though."
       },
       {
-        "Some days, I continue working just out of spyrite." :
+        "Some days, I continue working just out of \"spyrite.\"" :
         "Some days I continue working, just out of spyrite."
       }
     ]
@@ -94,7 +94,7 @@
         "I'm a damn good swordsman but don't let my mean looks fool ya. I'm actually a stellar comedian."
       },
       {
-        "I'll have you stormhowling with laughter in the blink of an eye." :
+        "I'll have you \"stormhowling\" with laughter in the blink of an eye." :
         "I'll have you stormhowling with laughter in the blink of an eye."
       }
     ]
@@ -110,7 +110,7 @@
         "I went on journey with a group of weirdos a while back."
       },
       {
-        "I guess you could say it was a blastia.":
+        "I guess you could say it was a \"blastia.\"":
         "I guess you could say it was, a blastia"
       }
     ]
@@ -122,8 +122,8 @@
         "I'm Alvin, nice to meet you."
       },
       {
-        "I'm either a perfectly reputable mercenary or a perfectly reputable businessman, depending on who you ask." :
-        "I'm either a perfectly reputable mercenary, or a perfectly reputable businessman, depending on who you ask."
+        "I'm a perfectly reputable businessman, depending on who you ask." :
+        "I'm a perfectly reputable businessman, depending on who you ask."
       }
     ]
   },
@@ -214,32 +214,32 @@
   {
     "SERES" : [
       {
-        "I'm called Seres, and I play a bigger role in the story of Tales of Berseria than you might think." :
-        "I'm called Seres, and I play a bigger role in the story of Tales of Berseria than you might think."
+        "I'm called Seres. I play a bigger role in the story of Tales of Berseria than you might think." :
+        "I'm called Seres. I play a bigger role in the story of Tales of Berseria than you might think."
       }
     ]
   },
   {
     "TERESA" : [
       {
-        "Exorcist Legate Teresa Burnes. Malakhim are tools to me." :
-        "Exorcist Legate Teresa Burnes. Malakhim are tools to me."
+        "I am Exorcist Legate Teresa Linares. Malakhim are tools to me." :
+        "I am Exorcist Legate Teresa Linares. Malakhim are tools to me."
       }
     ]
   },
   {
     "ZAVEID" : [
       {
-        "Hey there, I'm Zavied. Nice to meet you." :
-        "Hey there, I'm Zavied. Nice to meet you."
+        "I'm Zavied. Nice to meet you." :
+        "I'm Zavied. Nice to meet you."
       }
     ]
   },
   {
     "ARTORIUS" : [
       {
-        "I'm Artorius Collbrande. I'm a perfectly reasonable person." :
-        "I'm Artorius Collbrande. I'm a perfectly reasonable person."
+        "I am Artorius Collbrande. I'm a perfectly reasonable person." :
+        "I am Artorius Collbrande. I'm a perfectly reasonable person."
       }
     ]
   },
