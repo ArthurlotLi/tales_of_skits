@@ -29,7 +29,8 @@ body{
 
 #mainBackground {
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   position: absolute;
   overflow:hidden;
   left:0%;
@@ -114,59 +115,6 @@ body{
   justify-content: center;
   padding: 0px;
   font-size: min(24px, 4.7vw);
-}
-
-#introduction{
-  margin-top: 50px;
-
-  overflow: hidden;
-  background-color: var(--background-color);
-  border-color: black;
-  border-radius: 5px;
-  border-width: 10px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: min(max(2px,1.3%),10px);
-  padding-right: min(max(2px,1.3%),10px);
-  height: fit-content;
-}
-
-#introductionInner{
-  color:white;
-  margin-top: 0;
-  margin-left: min(5%, 20px);
-  margin-right: min(5%, 20px);
-  height: fit-content;
-}
-
-
-#introductionHeader{
-  margin-top: 0;
-  margin-bottom: 0;
-  color:white;
-  text-align: center;
-}
-
-#overview{
-  width: 100%;
-  min-height: 100%;
-  padding: 0px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-#overviewImage{
-  width: 100%;
-  min-height: 100%;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -webkit-backface-visibility: hidden; 
-  -ms-transform: translateZ(0); /* IE 9 */
-  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
-  transform: translateZ(0);
 }
 
 #skitSelectionSection{
@@ -292,4 +240,79 @@ body{
   text-align: center;
   color: rgb(255,255,255);
   font-size: 18px;
+}
+
+#introduction{
+  margin-top: 50px;
+
+  overflow: hidden;
+  background-color: var(--background-color);
+  border-color: black;
+  border-radius: 5px;
+  border-width: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: min(max(2px,1.3%),10px);
+  padding-right: min(max(2px,1.3%),10px);
+  height: fit-content;
+}
+
+#introductionInner{
+  color:white;
+  margin-top: 0;
+  margin-left: min(5%, 20px);
+  margin-right: min(5%, 20px);
+  height: fit-content;
+}
+
+
+#introductionHeader{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  color:white;
+  text-align: center;
+}
+
+#overview{
+  width: 100%;
+  min-height: 100%;
+  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#overviewImage{
+  width: 100%;
+  min-height: 100%;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-backface-visibility: hidden; 
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  transform: translateZ(0);
+}
+
+#about{
+  height: fit-content;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#aboutButton {
+  right:0;
+  bottom: 0;
+  width: min(max(80%, 300px), 500px);
+  background-color: rgba(255, 255, 255);
+  border-radius: 5px;
+  color: var(--secondary-color);
+  font-size: 16px;
+  margin-top: min(1.0vw, 15px);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

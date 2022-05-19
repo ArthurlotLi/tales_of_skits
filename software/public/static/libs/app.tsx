@@ -9,6 +9,24 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
+const defaultIntroductionPage1Style = {
+  width: "100%",
+  height: "fit-content",
+  display: "block",
+  visibility: "visible",
+  pointerEvents: "auto",
+  overflow: "hidden",
+}
+
+const defaultIntroductionPage2Style = {
+  width: "100%",
+  height: "fit-content",
+  display: "none",
+  visibility: "hidden",
+  pointerEvents: "none",
+  overflow: "hidden",
+}
+
 // Classes and objects that will dynamically define the contents of
 // the page. 
 class Skit {
@@ -65,6 +83,9 @@ export class App extends React.Component {
     skitSubtitles: defaultSkitSubtitles,
     currentAudio: null,
     currentSkit: "",
+    showingPage1: true,
+    introductionPage1Style: defaultIntroductionPage1Style,
+    introductionPage2Style: defaultIntroductionPage2Style,
   };
 
   constructor(){
@@ -200,6 +221,46 @@ export class App extends React.Component {
     skitDropdown.selectedIndex = 0
   }
 
+  async toggleAbout() {
+    var modifiedPage1Style = Object.assign({}, this.state.introductionPage1Style);
+    var modifiedPage2Style = Object.assign({}, this.state.introductionPage2Style);
+
+    if(this.state.showingPage1){
+      modifiedPage2Style["display"] = "block";
+      modifiedPage2Style["visibility"] = "visible";
+      modifiedPage2Style["pointerEvents"] = "auto";
+      modifiedPage1Style["display"] = "none";
+      modifiedPage1Style["visibility"] = "hidden";
+      modifiedPage1Style["pointerEvents"] = "none";
+
+      await this.setState({
+        introductionPage1Style : modifiedPage1Style,
+        introductionPage2Style : modifiedPage2Style,
+        showingPage1: false,
+      });
+      this.scrollToBottom();
+    }
+    else {
+      modifiedPage1Style["display"] = "block";
+      modifiedPage1Style["visibility"] = "visible";
+      modifiedPage1Style["pointerEvents"] = "auto";
+      modifiedPage2Style["display"] = "none";
+      modifiedPage2Style["visibility"] = "hidden";
+      modifiedPage2Style["pointerEvents"] = "none";
+
+      await this.setState({
+        introductionPage1Style : modifiedPage1Style,
+        introductionPage2Style : modifiedPage2Style,
+        showingPage1: true,
+      });
+      this.scrollToBottom();
+    }
+  }
+
+  scrollToBottom = () => {
+    this.endOfPage.scrollIntoView({ behavior: "auto" });
+  }
+
   render() {
     return (
       <div>
@@ -244,41 +305,153 @@ export class App extends React.Component {
               </div>
             </div>
 
+            <div style={{ float:"left", clear: "both" }}
+              ref={(el) => { this.endOfPage = el; }}>
+            </div>
+
             <div id="contentLower">
 
               <div id="introduction">
                 <div id="introductionInner">
-                  <h2 id="introductionHeader">
-                    Multi-Speaker Synthesis with Video Game Characters
-                  </h2>
 
-                  <div id="overview">
-                    <img id="overviewImage" src={require("../../../assets/overview.png").default}/>
+                  <div id="introductionPage1" style={this.state.introductionPage1Style}>
+                    <h2 id="introductionHeader">
+                      Multispeaker Synthesis with Video Game Characters
+                    </h2>
+
+                    <div id="overview">
+                      <img id="overviewImage" src={require("../../../assets/overview.png").default}/>
+                    </div>
+
+                    <br/>
+
+                    <div>
+                    Artificial Intelligence meets the "Tales of" video game series! 
+                    </div>
+
+                    <br/>
+
+                    <div>
+                      Voice data was extracted from in-game skits using Computer Vision, Natural Language Processing, and Speaker Verification methods. 
+
+                      This data was then used to train uniquely specialized, state of the art text-to-speech voice cloning models.
+                    </div>
+
+                    <br/>
+
+                    <div>
+                      This website provides original, voiced skits using the final model, whose components were trained over the course of months.
+                    </div>
+
+                    <br/>
+
+                    <div>
+                      Please enjoy the results of this project.
+                    </div>
                   </div>
 
-                  <div>
-                  Artificial Intelligence meets the "Tales of" video game series! 
+                  <div id="introductionPage2" style={this.state.introductionPage2Style}>
+                    <br/>
+                    <div>
+                      Author: Arthurlot Li
+                    </div>
+                    <br/>
+                    <div>
+                      <i>Feel free to contact me:</i> <a href="mailto:ArthurlotLi@gmail.com">ArthurlotLi@gmail.com</a>
+                    </div>
+
+                    <br/>
+
+                    <hr/>
+
+                    <h2>Citations:</h2>
+                    
+                    <div>
+                      <b>[1] LibriSpeech ASR Corpus</b> - <a target="_blank" href="https://www.openslr.org/12">https://www.openslr.org/12</a>
+                      <div>Published Paper (2015): <a target="_blank" href="https://ieeexplore.ieee.org/document/7178964">https://ieeexplore.ieee.org/document/7178964</a></div>
+                      <p>
+                      <div>Panayotov, Vassil, et al. "Librispeech: an asr corpus based on public domain audio books."</div> 
+                      <div>&emsp;2015 IEEE international conference on acoustics, speech and signal processing (ICASSP).</div>
+                      <div>&emsp;IEEE, 2015.</div>
+                      </p>
+                    </div>
+
+                    <br/>
+
+                    <div>
+                      <b>[2] Vox Celeb1 Dataset</b> - <a target="_blank" href="https://www.robots.ox.ac.uk/~vgg/data/voxceleb/">https://www.robots.ox.ac.uk/~vgg/data/voxceleb/</a>
+                      <div>Published Paper (2020): <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0885230819302712">https://www.sciencedirect.com/science/article/pii/S0885230819302712</a></div>
+                      <div>Published Paper (2017): <a target="_blank" href="https://arxiv.org/abs/1706.08612">https://arxiv.org/abs/1706.08612</a></div>
+                      <p>
+                      <div>Nagrani, Arsha, et al. "Voxceleb: Large-scale speaker verification in the wild." Computer</div> 
+                      <div>&emsp;Speech &#38; Language 60 (2020): 101027.</div>
+                      </p>
+                      <p>
+                      <div>Nagrani, Arsha, Joon Son Chung, and Andrew Zisserman. "Voxceleb: a large-scale speaker</div> 
+                      <div>&emsp;identification dataset." arXiv preprint arXiv:1706.08612 (2017).</div>
+                      </p>
+                    </div>
+
+                    <br/>
+
+                    <div>
+                      <b>[3] Vox Celeb2 Dataset</b> - <a target="_blank" href="https://www.robots.ox.ac.uk/~vgg/data/voxceleb/">https://www.robots.ox.ac.uk/~vgg/data/voxceleb/</a>
+                      <div>Published Paper (2018): <a target="_blank" href="https://arxiv.org/abs/1806.05622">https://arxiv.org/abs/1806.05622</a></div>
+                      <p>
+                      <div>Chung, Joon Son, Arsha Nagrani, and Andrew Zisserman. "Voxceleb2: Deep speaker recognition." </div>
+                      <div>&emsp;arXiv preprint arXiv:1806.05622 (2018).</div>
+                      </p>
+                    </div>
+
+                    <br/>
+
+                    <div>
+                      <b>[4] Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synthesis</b> - <a target="_blank" href="https://arxiv.org/abs/1806.04558">https://arxiv.org/abs/1806.04558</a>
+                      <p>
+                      <div>Jia, Ye, et al. "Transfer learning from speaker verification to multispeaker text-to-speech</div>
+                      <div>&emsp;synthesis." Advances in neural information processing systems 31 (2018).</div>
+                      </p>
+                    </div>
+
+                    <br/>
+
+                    <div>
+                      <b>[5] Real-Time Voice Cloning</b> - <a target="_blank" href="https://matheo.uliege.be/handle/2268.2/6801">https://matheo.uliege.be/handle/2268.2/6801</a>
+                      <p>
+                      <div>Jemine, Corentin. "Master thesis: Real-time voice cloning." (2019).</div>
+                      </p>
+                    </div>
+
+                    <br/>
+
+                    <div>
+                      <b>[6] Montreal Forced Aligner</b> - <a target="_blank" href="https://montreal-forced-aligner.readthedocs.io/en/latest/index.html">https://montreal-forced-aligner.readthedocs.io/en/latest/index.html</a>
+                      <div>Published Paper (2017): <a target="_blank" href="https://www.isca-speech.org/archive/interspeech_2017/mcauliffe17_interspeech.html">https://www.isca-speech.org/archive/interspeech_2017/mcauliffe17_interspeech.html</a></div>
+                      <p>
+                      <div>McAuliffe, Michael, et al. "Montreal Forced Aligner: Trainable Text-Speech Alignment Using</div>
+                      <div>&emsp;Kaldi." Interspeech. Vol. 2017. 2017.</div>
+                      </p>
+                    </div>
+
+                    <br/>
+
+                    <hr/>
+
+                    <br/>
+
+                    <div>
+                      <b><i>Tales of Berseria</i>, <i>Tales of Zestiria</i> in-game video recordings</b> - <a target="_blank" href="https://www.youtube.com/c/Chlorophylls">https://www.youtube.com/c/Chlorophylls</a>
+                    </div>
+                    <div>
+                      <b><i>Tales of Vesperia</i> in-game video recordings</b> - <a target="_blank" href="https://www.youtube.com/c/BAIGAMING">https://www.youtube.com/c/BAIGAMING</a>
+                    </div>
+
                   </div>
 
                   <br/>
 
-                  <div>
-                    Voice data was extracted from in-game skits using Computer Vision, Natural Language Processing, and Speaker Verification methods. 
-
-                    This data was then used to train uniquely specialized, state of the art text-to-speech voice cloning models.
-                  </div>
-
-                  <br/>
-
-                  <div>
-                    This website provides original, voiced skits using the final model, whose components were trained over the course of months.
-                  </div>
-
-
-                  <br/><hr/><br/>
-
-                  <div>
-                    Text.
+                  <div id="about">
+                    <button id="aboutButton" onClick={this.toggleAbout.bind(this)} >{this.state.showingPage1 ? "Citations + About" : "Main Page"}</button>
                   </div>
 
                   <br/>
