@@ -51,8 +51,8 @@ const audioWaitBetweenUtterances = 0; // in ms
 const audioEllipseWait = 1500; // in ms.
 
 const defaultSpeakerImage = "VELVET"
-const defaultSkitSubtitles = "Please select a skit to watch..."
-const defaultDisplayedSkit = { "-- Select skit --": ""}
+const defaultSkitSubtitles = "Please select a skit from dropdown to watch..."
+const defaultDisplayedSkit = { "--- Select skit ---": ""}
 
 export class App extends React.Component {
 
@@ -252,7 +252,9 @@ export class App extends React.Component {
                     Multi-Speaker Synthesis with Video Game Characters
                   </h2>
 
-                  <br/>
+                  <div id="overview">
+                    <img id="overviewImage" src={require("../../../assets/overview.png").default}/>
+                  </div>
 
                   <div>
                   Artificial Intelligence meets the "Tales of" video game series! 
@@ -273,6 +275,7 @@ export class App extends React.Component {
                   </div>
                 </div>
               </div>
+
             </div>
 
           </div>
