@@ -117,7 +117,7 @@ body{
 }
 
 #introduction{
-  margin-top: 40px;
+  margin-top: 50px;
 
   overflow: hidden;
   background-color: var(--background-color);
@@ -213,7 +213,7 @@ body{
 }
 
 #speakerImage{
-  margin-top: 50px;
+  margin-top: 45px;
 }
 
 #speakerImageInner{
@@ -255,12 +255,12 @@ body{
   text-align: center;
   color: black;
   font-size: 18px;
-  margin-top: 0px;
+  margin-top: 5px;
 }
 
 
 #skitSubtitles {
-  margin-top: 40px;
+  margin-top: 35px;
   bottom: 3vh;
   margin-bottom: 10px; 
   left: 0px;

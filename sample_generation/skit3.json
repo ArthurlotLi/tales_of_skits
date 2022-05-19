@@ -66,8 +66,8 @@
         "Speaking plainly, I do believe I would prefer to never speak with that one floating thing ever again."
       },
       {
-        "It was sized similarily to Teepo, yet utters a horrid screech that puts even the worst ghoul monster to shame." :
-        "It was sized similarily to Teepo, yet utters a horrid screech that puts even the worst ghoul monster to shame."
+        "It was sized similarily to Teepo, yet utters a horrid screech that puts even the worst of undead monsters to shame." :
+        "It was sized similarily to Teepo, yet utters a horrid screech that puts even the worst of undead monsters to shame."
       }
     ]
   },
@@ -82,8 +82,8 @@
   {
     "GAIUS" : [
       {
-        "Damn." :
-        "Damn."
+        "Curses." :
+        "Curses."
       },
       {
         "Jude, we must retreat, now. We are severely outmatched!" :
@@ -114,8 +114,8 @@
   {
     "EIZEN" :[
       {
-        "And why is that? He sounds perfectly normal to my ears." :
-        "And why is that? He sounds perfectly normal to my ears."
+        "And why is that? He sounds perfectly normal." :
+        "And why is that? He sounds perfectly normal."
       }
     ]
   },
@@ -142,8 +142,8 @@
   {
     "ROKUROU" : [
       {
-        "Hey, that sounds like a challenge." :
-        "Hey that sounds like a challenge."
+        "Too little strength, huh? Is that a challenge that I hear?" :
+        "Too little strength huh. Is that a challenge that I hear?"
       }
     ]
   },
@@ -158,12 +158,8 @@
   {
     "ROKUROU" : [
       {
-        "..." :
-        "null"
-      },
-      {
-        "Oh what the heck. You're on!" :
-        "Oh what the heck. You're on!"
+        "...Oh what the heck. I'll take you on!" :
+        "...Oh what the heck I'll take you on!"
       }
     ]
   },

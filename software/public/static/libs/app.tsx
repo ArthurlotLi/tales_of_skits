@@ -273,8 +273,21 @@ export class App extends React.Component {
                   <div>
                     This website provides original, voiced skits using the final model, whose components were trained over the course of months.
                   </div>
+
+
+                  <br/><hr/><br/>
+
+                  <div>
+                    Text.
+                  </div>
+
+                  <br/>
                 </div>
               </div>
+
+              <br/>
+
+              <br/>
 
             </div>
 
