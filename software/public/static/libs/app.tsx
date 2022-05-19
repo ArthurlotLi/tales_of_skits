@@ -48,11 +48,6 @@ const skitObjects = [
     "../../../assets/skit0", // skitSamples
   ),
   new Skit(
-    "Who keeps on mentioning Maotelus?", // skitName
-    "../../../assets/skit1.json", // skitJsonLocation
-    "../../../assets/skit1", // skitSamples
-  ),
-  new Skit(
     "A vested interest", // skitName
     "../../../assets/skit2.json", // skitJsonLocation
     "../../../assets/skit2", // skitSamples
@@ -61,6 +56,16 @@ const skitObjects = [
     "Discussing the others", // skitName
     "../../../assets/skit3.json", // skitJsonLocation
     "../../../assets/skit3", // skitSamples
+  ),
+  new Skit(
+    "A world free of malevolence", // skitName
+    "../../../assets/skit4.json", // skitJsonLocation
+    "../../../assets/skit4", // skitSamples
+  ),
+  new Skit(
+    "Who keeps on mentioning Maotelus?", // skitName
+    "../../../assets/skit1.json", // skitJsonLocation
+    "../../../assets/skit1", // skitSamples
   ),
 ]
 
