@@ -201,9 +201,9 @@ body{
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: black;
+  color: var(--background-color);;
   font-size: 18px;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 

@@ -59,7 +59,7 @@
       },
       {
         "Hand it over. Now." :
-        "Hand it over now."
+        "Hand it over. now."
       }
     ]
   },
@@ -78,8 +78,8 @@
         "I really don't have any reason to believe you."
       },
       {
-        "And besides. You're more a lizard than sailor these days anyways." :
-        "And besides. You're more a lizard than sailor these days anyways."
+        "And besides. You're more a lizard than sailor these days anyway." :
+        "And besides. You're more a lizard than sailor these days anyway."
       }
     ]
   },
@@ -94,8 +94,8 @@
   {
     "MEDISSA" : [
       {
-        "Oh, there you are, Velvet." :
-        "Oh. there you are Velvet."
+        "Oh, Velvet." :
+        "Oh. Velvet."
       },
       {
         "I've been looking all over for you. Kamoana was acting suspiciously earlier." :
@@ -154,8 +154,12 @@
         "Blaming a child for a clear act of thievery?"
       },
       {
-        "Dyle, I expected better even from someone like you. Surely your pride as a sailor is worth more than a stolen bag of gald?" :
-        "Dyle I expected better even from someone like you. Surely your pride as a sailor is worth more than a stolen bag of gald?"
+        "Dyle, I expected better even from someone like you." :
+        "Dyle I expected better even from someone like you."
+      },
+      {
+        "Surely your pride as a sailor is worth more than a stolen bag of gald?" :
+        "Surely your pride as a sailor is worth more than a stolen bag of gald?"
       }
     ]
   },

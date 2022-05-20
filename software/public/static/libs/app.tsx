@@ -63,7 +63,7 @@ const skitObjects = [
     "../../../assets/skit4", // skitSamples
   ),
   new Skit(
-    "Who keeps on mentioning Maotelus?", // skitName
+    "A roll call (sponsored by the Shepherd's prime lord)", // skitName
     "../../../assets/skit1.json", // skitJsonLocation
     "../../../assets/skit1", // skitSamples
   ),
@@ -456,7 +456,7 @@ export class App extends React.Component {
                   <br/>
 
                   <div id="about">
-                    <button id="aboutButton" onClick={this.toggleAbout.bind(this)} >{this.state.showingPage1 ? "Citations + About" : "Main Page"}</button>
+                    <button id="aboutButton" onClick={this.toggleAbout.bind(this)} >{this.state.showingPage1 ? "About + Citations" : "Main Page"}</button>
                   </div>
 
                   <br/>
