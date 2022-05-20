@@ -4,8 +4,12 @@
   "description": "Providing the results of TalesSkits and Multispeaker Synthesis in an entertaining fashion.",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules\\.bin\\webpack ./public/static/libs/app.tsx --config webpack-config.js && node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "node_modules\\.bin\\webpack ./public/static/libs/app.tsx --config webpack-config.js && node server.js"
+  },
+  "engines" : { 
+    "npm" : ">=7.0.0",
+    "node" : ">=16.0.0"
   },
   "author": "Arthurlot Li",
   "license": "ISC",
