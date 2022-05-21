@@ -146,8 +146,8 @@ body{
 }
 
 #skitSelectionDropdown{
-  max-width: 95%;
-  min-width: 50%;
+  max-width: 570px;
+  width: 90%;
   height: fit-content;
   border: 1px solid #ccc;
   padding: 6px 12px;

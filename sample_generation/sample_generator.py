@@ -19,6 +19,7 @@ from pathlib import Path
 import re
 from pydub import AudioSegment
 import argparse
+from typing import Optional
 
 sys.path.append("../../multispeaker_synthesis")
 
@@ -35,12 +36,27 @@ _embeds_fpath = Path("../../kotakee_companion/assets_audio/multispeaker_synthesi
 
 # Quality of the produced samples. 
 _target = 2000
-_overlap = 100
+_overlap = 400
 _batched = False
 
-def generate_samples(json_files: str):
+def generate_samples(json_files: Optional[str] = None, 
+                     singular_samples: Optional[list] = None):
+  """
+  Generates samples from either a main json file providing a skit
+  transcript or from a provided in-memory list of the same structure
+  for singular samples. 
 
-  json_files = json_files.split(",")
+  The resulting wav folder and the original .json file should be
+  copied over to the assets folder of the web application. 
+  """
+
+  assert json_files is None or singular_samples is None
+  assert json_files is not None or singular_samples is not None
+
+  if singular_samples is not None:
+    json_files = ["singular_samples.json"]
+  else:
+    json_files = json_files.split(",")
 
   for json_file in json_files:
     destination_dir = json_file.replace(".json", "")
@@ -59,9 +75,12 @@ def generate_samples(json_files: str):
     assert len(os.listdir(destination_dir)) == 0
 
     # All set. Let's generate the files from the json file.
-    f = open(json_file)
-    speaker_samples_json = json.load(f)
-    f.close()
+    if singular_samples is not None:
+      speaker_samples_json = singular_samples
+    else:
+      f = open(json_file)
+      speaker_samples_json = json.load(f)
+      f.close()
 
     multispeaker_synthesis = MultispeakerSynthesis(synthesizer_fpath=_synthesizer_fpath,
       speaker_encoder_fpath=_speaker_encoder_fpath, target=_target, overlap=_overlap, 

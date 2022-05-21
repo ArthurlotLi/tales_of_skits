@@ -39,7 +39,7 @@
     "DEZEL" : [
       {
         "I'd hold that thought if I were you." :
-        "I'd hold that thought if I were you."
+        "I'd hold that thought, if I were you."
       }
     ]
   },
@@ -54,8 +54,8 @@
   {
     "VELVET" : [
       {
-        "Sure it wasn't. I bet you'll be singing a different song when I eat you alive for this." :
-        "Sure it wasn't. I bet you'll be singing a different song when I eat you alive for this."
+        "Sure it wasn't. I bet you'll be singing a different song when I devour you for this." :
+        "Sure it wasn't. I bet you'll be singing a different song when I devour you for this."
       },
       {
         "Hand it over. Now." :
@@ -154,12 +154,8 @@
         "Blaming a child for a clear act of thievery?"
       },
       {
-        "Dyle, I expected better even from someone like you." :
-        "Dyle I expected better even from someone like you."
-      },
-      {
-        "Surely your pride as a sailor is worth more than a stolen bag of gald?" :
-        "Surely your pride as a sailor is worth more than a stolen bag of gald?"
+        "Dyle, I expected better even from someone like you. Surely your pride as a sailor is worth more than a stolen bag of gald?" :
+        "Dyle I expected better even from someone like you. Surely your pride as a sailor is worth more than a stolen bag of gald?"
       }
     ]
   },
@@ -196,14 +192,18 @@
       {
         "..." :
         "null"
+      },
+      {
+        "Were those people...?" :
+        "were those people"
       }
     ]
   },
   {
     "ALISHA" : [
       {
-        "I believe... it may be difficult for me to successfully escape the worries of our land here." :
-        "I believe, it may be difficult for me to successfully escape the worries of our land here"
+        "I... am afraid, it may prove difficult for me to truly escape the worries of our land here." :
+        "I am afraid, it may prove difficult for me to truly escape the worries of our land here"
       }
     ]
   }

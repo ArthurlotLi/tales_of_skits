@@ -3,7 +3,7 @@
     "EIZEN" : [
       {
         "The name's Eizen. I'm the captain of the Van Eltia and her crew.":
-        "The name's Eizen. I'm the captain of the Van Eltia and her crew."
+        "The name's Eizen. I'm the captain of the Von Eltia and her crew."
       },
       {
         "My sister and I have been going through some tough times for a while now.":
@@ -19,11 +19,11 @@
     "VELVET" : [
       {
         "I'm Velvet Crowe." :
-        "I'm Velvet Crowe."
+        "I'm Velvet Crow."
       },
       {
-        "I'm edgy and hard to talk to, but I've got a softer side." :
-        "I'm edgy and hard to talk to but I've got a softer side."
+        "I'm hard to talk to at first, but I've got a lighter side." :
+        "I'm hard to talk to at first, but I've got a lighter side."
       },
       {
         "In that respect, I fit right into the story of Tales of Berseria." :
@@ -67,7 +67,7 @@
       },
       {
         "Some days, I continue working just out of \"spyrite.\"" :
-        "Some days I continue working, just out of spyrite."
+        "Some days I continue working, just out of spyrit."
       }
     ]
   },
@@ -78,8 +78,12 @@
         "My name's Alisha Diphda. I serve as the princess of Hyland."
       },
       {
-        "Look at the time, I'm afraid I have to go now." :
-        "Look at the time, I'm afraid I have to go now."
+        "Unfortunately, I don't stick around for too long in the story of Tales of Zestiria." :
+        "Unfortunately I don't stick around for too long in the story of Tales of Zestiria."
+      },
+      {
+        "Some say that my character was \"squire\"-andered." :
+        "Some say that my character was squireondered."
       }
     ]
   },
@@ -106,8 +110,8 @@
         "I'm Yuri Lowell."
       },
       {
-        "I went on journey with a group of weirdos a while back.":
-        "I went on journey with a group of weirdos a while back."
+        "I went on a journey with a group of weirdos a while back.":
+        "I went on a journey with a group of weirdos a while back."
       },
       {
         "I guess you could say it was a \"blastia.\"":
@@ -118,20 +122,32 @@
   {
     "ALVIN" :[
       {
-        "I'm Alvin, nice to meet you.":
-        "I'm Alvin, nice to meet you."
+        "The name's Alvin.":
+        "The name's Alvin."
       },
       {
-        "I'm a perfectly reputable businessman, depending on who you ask." :
-        "I'm a perfectly reputable businessman, depending on who you ask."
+        "I'm about as untrustworthy as fruit salesmen get. I'll scam you of your gald if you're not careful." :
+        "I'm about as untrustworthy as fruit salesmen get. I'll scam you of your gald if you're not careful."
+      },
+      {
+        "\"Alvin\" a day's work, am I right?" :
+        "Alvin a day's work am I right"
       }
     ]
   },
   {
     "BENWICK" :[
       {
-        "First mate Benwick here. I keep things running shipshape." :
-        "First mate Benwick here. I keep things running shipshape."
+        "Benwick here. I keep things running shipshape." :
+        "Benwick here. I keep things running shipshape."
+      },
+      {
+        "Except my hat, where I let some birds nest." :
+        "Except my hat, where I let some birds nest."
+      },
+      {
+        "To be honest, it's getting kind of \"sylph\"-y.":
+        "To be honest it's getting kind of sfilthy"
       }
     ]
   },
@@ -146,8 +162,8 @@
         "I don't talk much, but I have no problems finding my way around."
       },
       {
-        "It's a bit of a breeze for me." :
-        "It's a bit of a breeze for me."
+        "You could say it's a bit of a \"breeze\"." :
+        "You could say it's a bit of a breeze."
       }
     ]
   },
@@ -156,82 +172,98 @@
       {
         "The name's Gaius. I'm undercover, though, so please call me Erston.":
         "The name's Gaius. I'm undercover though so please call me Erston"
+      },
+      {
+        "I once had a group of acquaintances with me during my time as King of Auj Oule." :
+        "I once had a group of acquaintances with me during my time as King of Auj Oul."
+      },
+      {
+        "They're not with me anymore, but I'm not too \"Chimeriad\" about it." :
+        "They're not with me anymore, but I'm not too Kimeriad about it."
       }
     ]
   },
   {
     "GRIMOIRH" : [
       {
-        "I'm Grimoirh. I'm the embodiment of being too old for all of this.":
-        "I'm Grimoirh. I'm the embodiment of being too old for all of this."
-      }
-    ]
-  },
-  {
-    "JUDITH" : [
-      {
-        "My name's Judith. Pleased to meet you.":
-        "My name's Judith. Pleased to meet you."
-      }
-    ]
-  },
-  {
-    "KUROGANE" :[
-      {
-        "I'm Kurogane, a swordsmith who worked so hard my head fell off." :
-        "I'm Kurogane, a swordsmith who worked so hard my head fell off."
+        "I am Grimoirh.":
+        "I am Grimoirh."
       },
       {
-        "Please remember that. I don't have a head. It's my defining feature.":
-        "Please remember that. I don't have a head. It's my defining feature."
-      }
-    ]
-  },
-  {
-    "LAILAH" : [
+        "I'm very picky when it comes to people asking me for my help." :
+        "I'm very picky when it comes to people asking me for my help."
+      },
       {
-        "Why hello there, I'm Lailah, a prime lord for Sorey." :
-        "Why hello there I'm Lailah a prime lord for Sorey."
+        "My latest pupil seems very \"Laphicet\" on succeeding, though." :
+        "My latest pupil seems very laphicet on succeeding though."
       }
     ]
   },
   {
     "MEDISSA" : [
       {
-        "I'm Medissa. If you do not eat your vegetables, you and I will have words." :
-        "I'm Medissa. If you do not eat your vegetables, you and I will have words."
+        "I'm Medissa, a therion." :
+        "I'm Medissa a therion."
+      },
+      {
+        "If you do not eat your vegetables, we will be having words." :
+        "If you do not eat your vegetables, we will be having words."
+      },
+      {
+        "Don't think about trying to hide unfinished food from me, either." :
+        "Don't think about trying to hide unfinished food from me either."
+      },
+      {
+        "Nothing e-\"snakes\" my gaze." :
+        "Nothing esnakes my gaze."
       }
     ]
   },
   {
     "RAVEN" : [
       {
-        "Old Man Raven's the name." :
-        "Old Man Raven's the name."
-      }
-    ]
-  },
-  {
-    "SERES" : [
+        "I'm Raven." :
+        "I'm Raven."
+      },
       {
-        "I'm called Seres. I play a bigger role in the story of Tales of Berseria than you might think." :
-        "I'm called Seres. I play a bigger role in the story of Tales of Berseria than you might think."
+        "I'm not too bad looking for an old man, don't ya think?" :
+        "I'm not too bad looking for an old man, don't ya think?"
+      },
+      {
+        "As pretty as a \"Schwann\", even." : 
+        "As pretty as a schwann even."
       }
     ]
   },
   {
     "TERESA" : [
       {
-        "I am Exorcist Legate Teresa Linares. Malakhim are tools to me." :
-        "I am Exorcist Legate Teresa Linares. Malakhim are tools to me."
+        "I am Teresa Linares." :
+        "I am Teresa Linares."
+      },
+      {
+        "Because of what happened in Hellawes, the Abbey transferred me to a different station." :
+        "Because of what happened in Hellawes, the Abbey transferred me to a different station."
+      },
+      {
+        "I imagine they simply wanted better \"Yesults\"." :
+        "I imagine they simply wanted better, yesults."
       }
     ]
   },
   {
     "ZAVEID" : [
       {
-        "I'm Zavied. Nice to meet you." :
-        "I'm Zavied. Nice to meet you."
+        "I'm Zavied." :
+        "I'm Zavied."
+      },
+      {
+        "I help Sorey and the others free someone important in Tales of Zestiria." :
+        "I help Sorey and the others free someone important in Tales of Zestiria."
+      },
+      {
+        "You could say we \"siegfried\" them." :
+        "You could say we sigfreed them."
       }
     ]
   },
@@ -248,22 +280,106 @@
       {
         "My name's Dyle. Please don't tell Kamoana I'm here. My tail just grew back." :
         "My name's Dyle. Please don't tell Kamoana I'm here. My tail just grew back."
+      },
+      {
+        "My antics with the crew are so great, I think I could make it into a game!" :
+        "My antics with the crew are so great, I think I could make it into a game!"
+      },
+      {
+        "I could even call it \"Tails\" of Dyle." :
+        "I could even call it, Tales of Dyle."
       }
     ]
   },
   {
     "MILLA" : [
       {
-        "I'm Milla Maxwell. I swish my hair like a cow." :
-        "I'm Milla Maxwell. I swish my hair like a cow."
+        "My name is Milla Maxwell." :
+        "My name is Milla Maxwell."
+      },
+      {
+        "It's not a question of whether you can or can't. It's a question of whether you do or don't." :
+        "It's not a question of whether you can or can't. It's a question of whether you do or don't."
+      },
+      {
+        "Though sometimes you may need a \"leg\" up from another." :
+        "Though sometimes you may need a leg up from another."
       }
     ]
   },
   {
     "ROWEN" : [
       {
-        "My name is Rowen. I have a passion for conducting." :
-        "My name is Rowen. I have a passion for conducting."
+        "My name is Rowen." :
+        "My name is Rowen."
+      },
+      {
+        "I have a passion for conducting. So much so that people labeled me as such." :
+        "I have a passion for conducting. So much so that people labeled me as such"
+      },
+      {
+        "Might that hint ring a \"Fezebel\"?" : 
+        "Might that hint ring a fezebell?"
+      }
+    ]
+  },
+  {
+    "MIKLEO" : [
+      {
+        "I'm Mikleo." :
+        "I'm Mikleo"
+      },
+      {
+        "I'm Sorey's childhood friend. We grew up together in Elysia with Gramps." :
+        "I'm Sorey's childhood friend. We grew up together in Elysia with Gramps."
+      },
+      {
+        "Somedays, though, I have to wonder as to the nature of our origins." :
+        "Somedays though, I have to wonder as to the nature of our origins."
+      },
+      {
+        "I suppose you could say I \"Muse\" about it a lot." :
+        "I suppose you could say I muse about it a lot."
+      }
+    ]
+  },
+  {
+    "LAILAH" : [
+      {
+        "My name is Lailah." :
+        "My name is Lailah."
+      },
+      {
+        "My powers allow Sorey to armatize." :
+        "My powers allow Sorey to armatize."
+      },
+      {
+        "But in truth, I would much prefer the power of \"armadillizing\" instead!" :
+        "But in truth I would much prefer the power of armadillizing instead!"
+      },
+      {
+        "Wasn't that such a well \"rounded\" joke?" :
+        "Wasn't that such a well rounded joke"
+      },
+      {
+        "My, I think I might be on a \"roll\"!" :
+        "My I think I might be on a roll"
+      },
+      {
+        "Here's another one-!" :
+        "Here's another one"
+      }
+    ]
+  },
+  {
+    "EDNA" : [
+      {
+        "Nope. No more.":
+        "Nope. No more."
+      },
+      {
+        "That's it folks. Thank you all for watching. Later.":
+        "That's it folks Thank you all for watching. Later."
       }
     ]
   }

@@ -63,7 +63,7 @@ const skitObjects = [
     "../../../assets/skit4", // skitSamples
   ),
   new Skit(
-    "A roll call (sponsored by the Shepherd's prime lord)", // skitName
+    "Lailah's final roll call", // skitName
     "../../../assets/skit1.json", // skitJsonLocation
     "../../../assets/skit1", // skitSamples
   ),
