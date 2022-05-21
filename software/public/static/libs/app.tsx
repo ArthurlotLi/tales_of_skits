@@ -9,6 +9,12 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
+// Get webserver address to make API requests to it. apiURL should
+// therefore contain http://192.168.0.197 (regardless of subpage).
+const currentURL = window.location.href;
+const splitURL = currentURL.split("/");
+const apiURL = splitURL[0] + "//" + splitURL[2]; 
+
 const defaultIntroductionPage1Style = {
   width: "100%",
   height: "fit-content",
@@ -48,22 +54,22 @@ const skitObjects = [
     "../../../assets/skit0", // skitSamples
   ),
   new Skit(
-    "A vested interest", // skitName
+    "A Vested Interest", // skitName
     "../../../assets/skit2.json", // skitJsonLocation
     "../../../assets/skit2", // skitSamples
   ),
   new Skit(
-    "Discussing the others", // skitName
+    "Discussing the Others", // skitName
     "../../../assets/skit3.json", // skitJsonLocation
     "../../../assets/skit3", // skitSamples
   ),
   new Skit(
-    "A world free of malevolence", // skitName
+    "A World Free of Malevolence", // skitName
     "../../../assets/skit4.json", // skitJsonLocation
     "../../../assets/skit4", // skitSamples
   ),
   new Skit(
-    "Lailah's final roll call", // skitName
+    "Final Roll Call", // skitName
     "../../../assets/skit1.json", // skitJsonLocation
     "../../../assets/skit1", // skitSamples
   ),
@@ -146,6 +152,7 @@ export class App extends React.Component {
   }
 
   async processTranscript(skitTranscript, skit) {
+    fetch(apiURL + "/watchSkit");
     for(var i = 0; i < skitTranscript.length; i++){
       if(this.state.currentSkit != skit.skitName) break;
       let segment = skitTranscript[i];
@@ -200,6 +207,7 @@ export class App extends React.Component {
                 await new Promise(r => setTimeout(r, audioEndedChecking));
               }
             }
+            fetch(apiURL +"/listenSample");
 
             // An extra pause between utterances. 
             if(audioWaitBetweenUtterances > 0){

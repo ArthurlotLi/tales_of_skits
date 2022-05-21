@@ -20,6 +20,8 @@ const app = express();
 // Basic user statistics
 var uniqueSessions = 0;
 var views = 0;
+var skitViews = 0;
+var samplesListened = 0;
 
 // Whenever the request path has "static" inside of it, simply serve 
 // the static directory as you'd expect. 
@@ -50,7 +52,7 @@ app.use(session({
 }))
 
 const log_statistics = function(){
-  console.log(`[INFO] ${new Date().toISOString()} | Unique Sessions: ${uniqueSessions} | Views: ${views}`)
+  console.log(`[INFO] ${new Date().toISOString()} | Unique Sessions: ${uniqueSessions} | Views: ${views} | Skits: ${skitViews} | Samples: ${samplesListened}`)
 }
 
 // For the main (and only) page, serve the web application to the client. 
@@ -67,6 +69,18 @@ app.get('/',(req,res) => {
   }
   log_statistics();
   res.sendFile(path.resolve(__dirname, "public", "index.html"));
+});
+
+// Simple APIs to increment statistics counters.
+app.get('/watchSkit', (req,res) => {
+  skitViews++;
+  log_statistics();
+  return res.status(200).send();
+});
+app.get('/listenSample', (req, res) =>{
+  samplesListened++;
+  //log_statistics();
+  return res.status(200).send();
 });
 
 // Start the server to listen on this port.
